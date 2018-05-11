@@ -10,6 +10,7 @@ namespace aspnet_get_started.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.ServerName = Server.MachineName;
             return View();
         }
 
