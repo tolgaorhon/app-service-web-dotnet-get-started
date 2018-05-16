@@ -11,6 +11,8 @@ namespace aspnet_get_started.Controllers
         public ActionResult Index()
         {
             ViewBag.ServerName = Server.MachineName;
+            ViewBag.RemoteAddress = Request.ServerVariables["REMOTE_ADDR"];
+            ViewBag.XforwardedFor = Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
             return View();
         }
 
